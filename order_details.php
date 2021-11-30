@@ -1,17 +1,17 @@
 <?php
-ini_set("display_errors", 1);
+//ini_set("display_errors", 1);
 
 //require 'vendor/autoload.php';
 //use \Firebase\JWT\JWT;
 
 //include headers
 header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: POST");
+header("Access-Control-Allow-Methods: GET");
 header("Content-type: application/json; charset=utf-8");
 
 // including files
 include_once("db_connect.php");
-if($_SERVER['REQUEST_METHOD'] === "POST"){
+if($_SERVER['REQUEST_METHOD'] === "GET"){
 
    // body
    $data = json_decode(file_get_contents("php://input"));
